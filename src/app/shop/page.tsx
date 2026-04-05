@@ -6,11 +6,6 @@ export const metadata: Metadata = {
   description: 'The complete ABYSS collection. Menswear, Womenswear, and Accessories.',
 }
 
-interface Props {
-  searchParams: Promise<{ category?: string }>
-}
-
-export default async function ShopPage({ searchParams }: Props) {
-  const { category } = await searchParams
-  return <ShopClient initialCategory={category || ''} />
+export default function ShopPage() {
+  return <ShopClient initialCategory="" />
 }
