@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-burgundy: #4A0E18;
+    --color-cream: #EFE8D8;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-cream text-brand-black font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    @apply bg-burgundy/20 text-burgundy;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-cream-dark;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-burgundy/50 rounded-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3.5 bg-burgundy text-cream font-sans text-xs tracking-luxury uppercase transition-all duration-300 hover:bg-burgundy-dark active:scale-[0.98];
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-3.5 border border-burgundy text-burgundy font-sans text-xs tracking-luxury uppercase transition-all duration-300 hover:bg-burgundy hover:text-cream active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-2.5 text-brand-black font-sans text-xs tracking-luxury uppercase transition-all duration-300 hover:text-burgundy;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight text-brand-black;
+  }
+
+  .section-subtitle {
+    @apply font-sans text-xs tracking-luxury uppercase text-burgundy;
+  }
+
+  .divider {
+    @apply w-12 h-px bg-burgundy mx-auto my-4;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-cream-dark bg-brand-white text-brand-black font-sans text-sm placeholder:text-cream-deep focus:outline-none focus:border-burgundy transition-colors duration-200;
+  }
+
+  .label {
+    @apply block font-sans text-xs tracking-luxury uppercase text-brand-black/70 mb-2;
+  }
+
+  .nav-link {
+    @apply font-sans text-xs tracking-luxury uppercase text-brand-black transition-colors duration-200 hover:text-burgundy relative;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
