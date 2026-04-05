@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import ProductCard from '@/components/shop/ProductCard'
@@ -14,7 +14,7 @@ interface FilterState {
   sort: string
 }
 
-export default function ShopPage() {
+function ShopContent() {
   const searchParams = useSearchParams()
   const initialCategory = searchParams.get('category') || ''
 
@@ -134,5 +134,17 @@ export default function ShopPage() {
         </div>
       </div>
     </PageTransition>
+  )
+}
+
+export default function ShopPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-cream flex items-center justify-center">
+        <p className="font-sans text-xs tracking-luxury uppercase text-brand-black/40">Loading Collection…</p>
+      </div>
+    }>
+      <ShopContent />
+    </Suspense>
   )
 }
