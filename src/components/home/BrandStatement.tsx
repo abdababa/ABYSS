@@ -92,11 +92,11 @@ export default function BrandStatement() {
           transition={{ delay: 0.7, duration: 0.6 }}
           className="mt-16 flex items-center gap-8"
         >
-          <Link href="/heritage" className="btn-outline">
+          <Link href="/tier-1/heritage" className="btn-outline">
             Our Heritage
           </Link>
           <Link
-            href="/shop"
+            href="/tier-1/shop"
             className="font-sans text-xs tracking-luxury uppercase text-brand-black/60 hover:text-burgundy transition-colors group flex items-center gap-2"
           >
             View all pieces

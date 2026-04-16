@@ -19,7 +19,7 @@ export default function ProductCard({ product, index = 0 }: Props) {
       layoutId={`product-card-${product.id}`}
       className="group"
     >
-      <Link href={`/product/${product.slug}`} className="block">
+      <Link href={`/tier-1/product/${product.slug}`} className="block">
         {/* Image container */}
         <div className="relative overflow-hidden bg-cream-dark aspect-[3/4]">
           {/* Main image */}

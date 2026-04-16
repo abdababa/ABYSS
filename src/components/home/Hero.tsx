@@ -86,10 +86,10 @@ export default function Hero() {
             variants={staggerItem}
             className="flex flex-col sm:flex-row gap-4 mt-10"
           >
-            <Link href="/shop" className="btn-primary">
+            <Link href="/tier-1/shop" className="btn-primary">
               Explore the Collection
             </Link>
-            <Link href="/heritage" className="inline-flex items-center gap-2 font-sans text-xs tracking-luxury uppercase text-cream/70 hover:text-cream transition-colors group">
+            <Link href="/tier-1/heritage" className="inline-flex items-center gap-2 font-sans text-xs tracking-luxury uppercase text-cream/70 hover:text-cream transition-colors group">
               Our Heritage
               <span className="transform group-hover:translate-x-1 transition-transform">→</span>
             </Link>

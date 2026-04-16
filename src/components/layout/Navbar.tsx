@@ -7,9 +7,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useCart } from '@/context/CartContext'
 
 const navLinks = [
-  { label: 'Shop', href: '/shop' },
-  { label: 'Heritage', href: '/heritage' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Shop', href: '/tier-1/shop' },
+  { label: 'Heritage', href: '/tier-1/heritage' },
+  { label: 'Contact', href: '/tier-1/contact' },
 ]
 
 export default function Navbar() {
@@ -147,7 +147,7 @@ export default function Navbar() {
                 transition={{ delay: navLinks.length * 0.08 }}
                 className="pt-4 border-t border-cream-dark"
               >
-                <Link href="/checkout" className="section-subtitle">
+                <Link href="/tier-1/checkout" className="section-subtitle">
                   Checkout →
                 </Link>
               </motion.div>

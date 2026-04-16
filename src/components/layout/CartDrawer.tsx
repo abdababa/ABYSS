@@ -63,7 +63,7 @@ export default function CartDrawer() {
                     <p className="font-serif text-lg text-brand-black/60">Your cart is empty</p>
                     <p className="font-sans text-xs text-brand-black/40 mt-1 tracking-wide">Discover our collection</p>
                   </div>
-                  <Link href="/shop" onClick={closeCart} className="btn-outline mt-2">
+                  <Link href="/tier-1/shop" onClick={closeCart} className="btn-outline mt-2">
                     Shop Now
                   </Link>
                 </div>
@@ -94,7 +94,7 @@ export default function CartDrawer() {
                         {/* Details */}
                         <div className="flex-1 min-w-0">
                           <Link
-                            href={`/product/${item.product.slug}`}
+                            href={`/tier-1/product/${item.product.slug}`}
                             onClick={closeCart}
                             className="font-serif text-sm leading-snug hover:text-burgundy transition-colors line-clamp-2"
                           >
@@ -151,7 +151,7 @@ export default function CartDrawer() {
                   Shipping and duties calculated at checkout
                 </p>
                 <Link
-                  href="/checkout"
+                  href="/tier-1/checkout"
                   onClick={closeCart}
                   className="btn-primary w-full text-center block"
                 >
